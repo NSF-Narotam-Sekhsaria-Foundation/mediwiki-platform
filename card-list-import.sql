@@ -20,10 +20,11 @@ where object_id = ?;
 -- 4. Create a sheet by name medi_term_relationships and copy header row from private donors sheet
 -- 4.1. Copy the post_row_index and change denominator
 -- 4.2. To get the list of fields names to put in the formula run the query in 3.6. Replace ? with the sample post you have created
--- 5. Count the number of posts you have to create by counting the number of rows in Data
--- 5.1. Multiply above with number of rows you have per medi_postmeta per post
--- 5.2. In medi_postmeta sheet select and drag till you reach till that row number
--- 5.3. Do the same in medi_term_relationships
--- 5.4. Filter out where the term_taxonomy_id is empty
+-- 5. In the medi_posts sheet put the next available post_id (in production this has to be done by first asking NSF to stop creating any posts for a while)
+-- 5.1 Count the number of posts you have to create by counting the number of rows in Data
+-- 5.2. Multiply above with number of rows you have per medi_postmeta per post
+-- 5.4. In medi_postmeta sheet select and drag till you reach till that row number
+-- 5.5. Do the same in medi_term_relationships
+-- 5.6. Filter out where the term_taxonomy_id is empty
 -- 6. Download all three sheets as CSV files
 -- 7. Import it in the mysql database
